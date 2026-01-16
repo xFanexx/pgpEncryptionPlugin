@@ -187,31 +187,9 @@ Message déchiffré affiché (🔓)
 - ❌ Pas de clés avec passphrase
 - ❌ Pas d'expiration de clés
 
-### Techniques
-- ⚠️ Patches peuvent casser avec mises à jour Discord
-- ⚠️ TypeScript errors (imports Vencord)
-- ⚠️ Stockage non chiffré
-- ⚠️ Pas de tests automatisés
 
-## 🚀 Roadmap
 
-### Version 1.1.0 (Court terme)
-- [ ] Support canaux de groupe
-- [ ] Signatures numériques
-- [ ] Amélioration patches (plus robustes)
-
-### Version 1.2.0 (Moyen terme)
-- [ ] Clés avec passphrase
-- [ ] Export/import configuration
-- [ ] Indicateurs visuels (badges)
-
-### Version 2.0.0 (Long terme)
-- [ ] Stockage chiffré
-- [ ] Gestion expiration clés
-- [ ] Multiples clés par utilisateur
-- [ ] Web of Trust
-
-## 🤝 Contribution
+## Contribution
 
 ### Comment contribuer
 
@@ -252,12 +230,7 @@ Message déchiffré affiché (🔓)
 Ce plugin est fourni tel quel, sans garantie.
 Utilisez-le à vos propres risques.
 
-## 👤 Auteur
-
-**daisseur**  
-ID Discord: 00n1
-
-## 🙏 Remerciements
+## Remerciements
 
 - Vendicated (Vencord)
 - openpgp.js team
@@ -266,5 +239,4 @@ ID Discord: 00n1
 ---
 
 **Version actuelle** : 1.0.0  
-**Dernière mise à jour** : 2026-01-15  
 **Statut** : Stable ✅
