@@ -29,6 +29,10 @@ Plugin de chiffrement/déchiffrement automatique des messages Discord avec PGP.
 5. La dépendance `openpgp` doit être installée :
    ```bash
    # cd [Vencord]
+
+   # Si les autres dépendances n'ont pas été installées:
+   # pnpm i --frozen-lock files
+   
    pnpm add -w openpgp
    ```
 6. Rebuild Vencord :
