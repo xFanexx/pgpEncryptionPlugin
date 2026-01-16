@@ -16,18 +16,30 @@ Plugin de chiffrement/déchiffrement automatique des messages Discord avec PGP.
 
 ## 📦 Installation
 
-1. Assurez-vous d'avoir Vencord installé
-2. Copiez le dossier `pgpEncryptionPlugin` dans `[Vencord]/src/userplugins/`
-3. La dépendance `openpgp` doit être installée :
+1. Assurez-vous d'avoir Vencord installé depuis le repo github:
    ```bash
-   cd [Vencord]
+   git clone https://github.com/Vendicated/Vencord
+   ```
+3. cloner le repo `pgpEncryptionPlugin` dans `[Vencord]/src/userplugins/`
+   ```bash
+   mkdir -p Vencord/src/userplugins
+   cd Vencord/src/userplugins
+   git clone https://github.com/daisseur/pgpEncryptionPlugin
+   ```
+5. La dépendance `openpgp` doit être installée :
+   ```bash
+   # cd [Vencord]
    pnpm add -w openpgp
    ```
-4. Rebuild Vencord :
+6. Rebuild Vencord :
    ```bash
-   pnpm build --watch
+   pnpm build
    ```
-5. Rechargez Discord
+7. Rechargez Discord / Vesktop (Sur vekstop il faut choisir le dossier `dist` dans `[Vencord]/dist`)
+   __Pour l'application discord :__ Avant de recharger votre **application discord** vous allez devoir injecter la nouvelle version Vencord avec le plugin dans discord:
+   ```
+   pnpm inject
+   ```
 
 ## 🚀 Utilisation
 
