@@ -1,6 +1,10 @@
-# Plugin PGP Encryption pour Vencord
+# Plugin PGP Encryption pour Vencord 
+> Présupposé compatible avec equicord.. en théorie
+
+<br>
 
 Plugin de chiffrement/déchiffrement automatique des messages Discord avec PGP.
+> Merci à copilot(claude-sonnet4.5) de m'avoir aidé à comprendre comment faire un plugin vencord parce que c'est pas super évident. Il m'a aussi aidé à faire les fichiers markdown mais chut ça se voit à peine
 
 ## 🔐 Fonctionnalités
 
@@ -71,6 +75,9 @@ Accédez aux paramètres du plugin via : **Paramètres Vencord > Plugins > PGP E
 - Conservez une copie de sauvegarde de vos clés privées en lieu sûr
 - Les clés sont stockées localement dans Vencord (DataStore)
 - Ce plugin utilise RSA 4096 bits (standard industriel)
+  
+> [!IMPORTANT]
+> Je compte proposer plusieurs options dont RSA 2048/1024 bits avec EDSA, mais bon pour l'instant RSA génère une grosse clé mais est secure, c'est ce qui compte.
 
 ### Bonnes pratiques
 
@@ -83,10 +90,10 @@ Accédez aux paramètres du plugin via : **Paramètres Vencord > Plugins > PGP E
 
 ### Premier échange avec un contact
 
-1. **Vous** : Générez votre paire de clés
-2. **Vous** : Envoyez votre clé publique à votre contact (par un canal sécurisé)
-3. **Votre contact** : Vous envoie sa clé publique
-4. **Vous** : Configurez les clés dans le menu contextuel :
+1. **Vous (bob)** : Générez votre paire de clés
+2. **Vous (bob)** : Envoyez votre clé publique à votre contact (par un canal sécurisé)
+3. **Votre contact (alice)** : Vous envoie sa clé publique
+4. **Vous (bob)** : Configurez les clés dans le menu contextuel :
    - Sa clé publique (pour chiffrer vos messages)
    - Votre clé privée (pour déchiffrer ses messages)
 5. **Testez** : Envoyez un message de test
@@ -95,7 +102,7 @@ Accédez aux paramètres du plugin via : **Paramètres Vencord > Plugins > PGP E
 
 Les clés doivent être au format armored (ASCII) :
 
-**Clé publique** :
+**Clé publique (Alice's key)** :
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -104,7 +111,7 @@ Les clés doivent être au format armored (ASCII) :
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-**Clé privée** :
+**Clé privée (Bob's key)** :
 ```
 -----BEGIN PGP PRIVATE KEY BLOCK-----
 
@@ -113,7 +120,7 @@ Les clés doivent être au format armored (ASCII) :
 -----END PGP PRIVATE KEY BLOCK-----
 ```
 
-## 🐛 Dépannage
+## Dépannage
 
 ### Les messages ne se déchiffrent pas
 - Vérifiez que vous avez bien configuré **votre clé privée** pour cet utilisateur
@@ -146,9 +153,7 @@ pgpEncryptionPlugin/
 
 - `openpgp` : ^6.3.0 - Bibliothèque de chiffrement PGP
 
-## 📝 TODO / Améliorations futures
-
-- [ ] Support des canaux de groupe
+## 📝 TODO
 - [ ] Support des clés protégées par mot de passe
 - [ ] Export/Import de configuration
 - [ ] Indicateur visuel dans l'interface pour voir qui a une clé configurée
