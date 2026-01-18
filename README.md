@@ -1,4 +1,4 @@
-# Plugin PGP Encryption for Vencord 
+# PGP Encryption Plugin  for Vencord 
 > Presumed compatible with equicord... in theory
 
 <br>
